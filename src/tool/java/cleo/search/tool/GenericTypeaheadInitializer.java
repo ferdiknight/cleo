@@ -91,7 +91,9 @@ public class GenericTypeaheadInitializer<E extends Element> implements Typeahead
     BloomFilter<Long> bloomFilter = new FnvBloomFilterLong(config.getFilterPrefixLength());
     
     // create scoreScanner
-    ScoreScanner scoreScanner = new ElementScoreScanner(config.getElementScoreFile());
+    ScoreScanner scoreScanner = null;
+    if(config.getElementScoreFile() != null)
+       scoreScanner = new ElementScoreScanner(config.getElementScoreFile());
     
     // Create GenericTypeahead
     return new GenericTypeahead<E>(

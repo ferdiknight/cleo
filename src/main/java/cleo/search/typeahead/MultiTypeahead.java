@@ -16,25 +16,18 @@
 
 package cleo.search.typeahead;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
-import java.util.concurrent.ThreadFactory;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.TimeoutException;
-
-import org.apache.log4j.Logger;
-
 import cleo.search.Element;
 import cleo.search.collector.Collector;
 import cleo.search.collector.MultiCollector;
 import cleo.search.collector.MultiSourceCollector;
 import cleo.search.collector.SortedCollector;
 import cleo.search.util.Strings;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.*;
+import org.apache.log4j.Logger;
 
 /**
  * MultiTypeahead - A Typeahead to delegate tasks to multiple individual Typeahead(s). 

@@ -359,7 +359,6 @@ public class TestWeightedNetworkTypeahead extends AbstractTestWeightedNetworkTyp
     
     conn = new SimpleConnection(13, 131, true);
     typeahead.index(conn);
-    
     typeahead.flush();
     
     // Search
