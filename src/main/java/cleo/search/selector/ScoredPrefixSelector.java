@@ -54,14 +54,14 @@ public class ScoredPrefixSelector<E extends Element> extends PrefixSelector<E> {
     
     for(String prefix : queryTerms) {
       for(i = 0; i < eCount; i++) {
-        index = index % eCount;
+        index %= eCount;
         if(elemTerms[index].startsWith(prefix)) {
           // Adjust score according to whether two adjacent terms are matched in order
           if(lastIndex < index) {
             score = Math.sqrt(score);
             orderBoost++;
           } else {
-            score = score * score;
+            score *= score;
             orderBoost--;
           }
           

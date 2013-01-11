@@ -19,7 +19,7 @@ package cleo.search.store;
 import java.util.List;
 
 import krati.Persistable;
-import krati.array.Array;
+import krati.array.Array; 
 
 import cleo.search.util.Weight;
 
